@@ -1,7 +1,7 @@
-import { Tabs } from 'expo-router'
-import React from 'react'
-import { Image, Text, View } from 'react-native'
-import { icons } from '../../constants'
+import { Tabs } from 'expo-router';
+import React from 'react';
+import { Image, Text, View } from 'react-native';
+import { colors, icons } from '../../constants';
 
 const TabIcon = ({ icon, color, name, focused }) => {
 	return (
@@ -19,8 +19,8 @@ const TabIcon = ({ icon, color, name, focused }) => {
 				{name}
 			</Text>
 		</View>
-	)
-}
+	);
+};
 
 const TabsLayout = () => {
 	const screens = [
@@ -28,19 +28,19 @@ const TabsLayout = () => {
 		{ name: 'bookmark', title: 'Bookmark', icon: icons.bookmark },
 		{ name: 'create', title: 'Create', icon: icons.plus },
 		{ name: 'profile', title: 'Profile', icon: icons.profile },
-	]
+	];
 
 	return (
 		<>
 			<Tabs
 				screenOptions={{
 					tabBarShowLabel: false,
-					tabBarActiveTintColor: '#FFA001',
-					tabBarInactiveTintColor: '#CDCDE0',
+					tabBarActiveTintColor: colors.secondary,
+					tabBarInactiveTintColor: colors.gray100,
 					tabBarStyle: {
-						backgroundColor: '#161622',
+						backgroundColor: colors.primary,
 						borderTopWidth: 1,
-						borderTopColor: '#232533',
+						borderTopColor: colors.black200,
 						height: 84,
 					},
 				}}
@@ -65,7 +65,7 @@ const TabsLayout = () => {
 				))}
 			</Tabs>
 		</>
-	)
-}
+	);
+};
 
-export default TabsLayout
+export default TabsLayout;

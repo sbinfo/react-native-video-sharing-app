@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Image, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CustomButton from '../components/ui/CustomButton';
-import { images } from '../constants';
+import { colors, images } from '../constants';
 
 export default function App() {
 	return (
@@ -15,6 +15,7 @@ export default function App() {
 						className="w-[130px] h-[84px]"
 						resizeMode="contain"
 					/>
+
 					<Image
 						source={images.cards}
 						className="max-w-[360px] w-full h-[300px]"
@@ -26,6 +27,7 @@ export default function App() {
 							Discover Endless Possibilities with{' '}
 							<Text className="text-secondary-200">Aora</Text>
 						</Text>
+
 						<Image
 							source={images.path}
 							className="w-[7rem] h-[15px] absolute -bottom-3 -right-6"
@@ -46,7 +48,7 @@ export default function App() {
 				</View>
 			</ScrollView>
 
-			<StatusBar backgroundColor="#161622" style="light" />
+			<StatusBar backgroundColor={colors.primary} style="light" />
 		</SafeAreaView>
 	);
 }
